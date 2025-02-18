@@ -6,3 +6,9 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8001:80"
+  
+  ui_test:
+    build: ./ui-test
+    tty: true
+    volumes:
+      - ./ui-testing-playwright-report:/app/report
