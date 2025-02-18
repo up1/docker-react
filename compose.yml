@@ -31,7 +31,9 @@ services:
       - ./demo-react:/app
   
   mock_api:
-    build: ./mock-api
+    build: 
+      context: ./mock-api
+      dockerfile: Dockerfile
     tty: true
     ports:
       - "9999:8882"
