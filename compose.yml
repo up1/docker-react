@@ -29,3 +29,9 @@ services:
       - SONAR_PROJECT_BASE_DIR=/app
     volumes:
       - ./demo-react:/app
+  
+  mock_api:
+    build: ./mock-api
+    tty: true
+    ports:
+      - "9999:8882"
