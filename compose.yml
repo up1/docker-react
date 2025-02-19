@@ -49,3 +49,8 @@ services:
       MYSQL_DATABASE: demo
       MYSQL_USER: demo
       MYSQL_PASSWORD: demo
+    volumes:
+      - xyz:/var/lib/mysql
+
+volumes:
+  xyz:
