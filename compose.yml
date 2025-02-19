@@ -37,3 +37,15 @@ services:
     tty: true
     ports:
       - "9999:8882"
+
+  mock_db:
+    build: 
+      context: ./mock-db
+      dockerfile: Dockerfile
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: demo
+      MYSQL_USER: demo
+      MYSQL_PASSWORD: demo
